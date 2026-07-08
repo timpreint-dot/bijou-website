@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BIJOU MANAGEMENT - OnlyFans talent & brand agency. Creative house for iconic women. Полноценное ведение моделей, контент-продакшн и трафик." data-i18n="meta-desc">
+    <title>BIJOU MANAGEMENT // Creative House for Iconic People</title>
+    <!-- Favicon (Electric Blue Starburst) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%235AA9FF'>✦</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+
+    <!-- Ambient Glow backgrounds -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="grid-background"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">✦</span> BIJOU
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-i18n="nav-home">Главная</a>
+                <a href="#about" class="nav-link" data-i18n="nav-about">О нас</a>
+                <a href="#philosophy" class="nav-link" data-i18n="nav-philosophy">Философия</a>
+                <a href="#team" class="nav-link" data-i18n="nav-team">Команда</a>
+                <a href="#services" class="nav-link" data-i18n="nav-services">Услуги</a>
+                <a href="#results" class="nav-link" data-i18n="nav-results">Кейсы</a>
+                <a href="#terms" class="nav-link" data-i18n="nav-terms">Условия</a>
+                <a href="#privacy" class="nav-link" data-i18n="nav-privacy">Приватность</a>
+                <a href="#" class="nav-link open-popup-btn" data-i18n="nav-contact">Связаться с нами</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="uk">UK</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                </div>
+                <button class="btn btn-secondary btn-sm nav-cta open-popup-btn" data-i18n="nav-btn">Связаться</button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Открыть меню">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-sections">
+        
+        <!-- Слайд 0: Hero Section -->
+        <section id="home" class="slide-section intro-section">
+            <div class="hero-bg-image-wrapper">
+                <div class="hero-bg-overlay"></div>
+                <img src="assets/model-portrait.png" alt="BIJOU Model Portrait" class="hero-bg-img">
+            </div>
+            
+            <div class="container intro-container">
+                <div class="hero-main-content">
+                    <div class="hero-star">✦</div>
+                    <h1 class="txt-logo">BIJOU</h1>
+                    <div class="hero-slogan" data-i18n="hero-slogan">CREATIVE HOUSE FOR ICONIC PEOPLE</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 1: О нас -->
+        <section id="about" class="slide-section reveal">
+            <div class="container slide-body-container">
+                <h2 class="txt-slide-title" data-i18n="slide1-title">Команда, которая уже 2 года строит карьеры моделей</h2>
+                
+                <div class="grid-three-cols reveal reveal-cascade">
+                    <div class="content-card">
+                        <span class="card-tag" data-i18n="slide1-exp-tag">ОПЫТ</span>
+                        <p class="card-desc" data-i18n="slide1-exp-desc">Более двух лет управляем аккаунтами и стабильно увеличиваем доход моделей на OnlyFans. Наша команда полностью берет на себя развитие твоего профиля.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <span class="card-tag" data-i18n="slide1-focus-tag">ФОКУС</span>
+                        <p class="card-desc" data-i18n="slide1-focus-desc">Мы — OnlyFans-агентство, но работаем шире: строим твой личный бренд. Организуем съёмки, фотосессии и развиваем тебя как медийную личность.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <span class="card-tag" data-i18n="slide1-approach-tag">ПОДХОД</span>
+                        <p class="card-desc" data-i18n="slide1-approach-desc">Комфортные условия, прозрачное общение, открытость к твоим идеям. Каждое решение по контенту и стратегии обсуждается с тобой.</p>
+                    </div>
+                </div>
+
+                <!-- Collage Row -->
+                <div class="collage-grid-two-cols reveal reveal-cascade">
+                    <div class="collage-img-box">
+                        <div class="editorial-image-overlay"></div>
+                        <img src="assets/rooftop-laugh.png" alt="Rooftop Production Session" class="editorial-img">
+                        <span class="collage-label">✦ CREATIVE COMMUNITY</span>
+                    </div>
+                    <div class="collage-img-box">
+                        <div class="editorial-image-overlay"></div>
+                        <img src="assets/gimbal-shoot.png" alt="On-Set Mobile Video Production" class="editorial-img">
+                        <span class="collage-label">✦ DYNAMIC CONTENT CREATION</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horizontal Image Marquee -->
+        <div class="marquee-image-section">
+            <div class="marquee-track">
+                <div class="marquee-image-group">
+                    <img src="assets/model-portrait.png" alt="Model Portrait">
+                    <img src="assets/rooftop-laugh.png" alt="Rooftop Production">
+                    <img src="assets/gimbal-shoot.png" alt="Mobile Video Production">
+                    <img src="assets/team-meeting.png" alt="Performance Strategy Session">
+                    <img src="assets/team-call.png" alt="Fan Engagement Hub">
+                </div>
+                <!-- Duplicate for infinite scroll loop -->
+                <div class="marquee-image-group" aria-hidden="true">
+                    <img src="assets/model-portrait.png" alt="Model Portrait">
+                    <img src="assets/rooftop-laugh.png" alt="Rooftop Production">
+                    <img src="assets/gimbal-shoot.png" alt="Mobile Video Production">
+                    <img src="assets/team-meeting.png" alt="Performance Strategy Session">
+                    <img src="assets/team-call.png" alt="Fan Engagement Hub">
+                </div>
+            </div>
+        </div>
+
+        <!-- Слайд 2: Философия (Solid Blue screen section) -->
+        <section id="philosophy" class="slide-section solid-blue-bg reveal">
+            
+            <div class="container slide-body-container">
+                <h2 class="txt-slide-title dark-text" data-i18n="slide2-title">Мы зарабатываем, только когда зарабатываешь ты</h2>
+                
+                <p class="slide-intro-text dark-text" data-i18n="slide2-desc">
+                    Наш доход — процент от твоего. Вложения агентства в продвижение, команду и съёмки окупаются только при твоём росте, поэтому мы заинтересованы в нём напрямую — это партнёрство, а не найм.
+                </p>
+                
+                <div class="grid-two-cols gap-large">
+                    <div class="inline-stat">
+                        <h3 class="stat-h-text dark-text" data-i18n="slide2-stat1-h">Личный бренд</h3>
+                        <p class="stat-p-text dark-text" data-i18n="slide2-stat1-p">а не просто страница на OF</p>
+                    </div>
+                    
+                    <div class="inline-stat">
+                        <h3 class="stat-h-text dark-text" data-i18n="slide2-stat2-h">Долгий срок</h3>
+                        <p class="stat-p-text dark-text" data-i18n="slide2-stat2-p">строим актив, который растёт годами</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 3: Команда -->
+        <section id="team" class="slide-section reveal">
+            
+            <div class="container slide-body-container">
+                <h2 class="txt-slide-title" data-i18n="slide3-title">За тобой стоит полная команда</h2>
+                
+                <div class="grid-four-cols reveal reveal-cascade">
+                    <div class="content-card">
+                        <span class="card-tag" data-i18n="slide3-a-tag">A // ЧАТТЕРЫ</span>
+                        <p class="card-desc" data-i18n="slide3-a-desc">Посменная система — твои фанаты получают ответ и покупают контент в любое время суток. Ты не переписываешься сама.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <span class="card-tag" data-i18n="slide3-b-tag">B // КОНТРОЛЬ КАЧЕСТВА</span>
+                        <p class="card-desc" data-i18n="slide3-b-desc">Менеджеры следят за работой всей команды: тоном переписок, скоростью ответов и результатами продаж.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <span class="card-tag" data-i18n="slide3-c-tag">C // СОЦСЕТИ И ТРАФИК</span>
+                        <p class="card-desc" data-i18n="slide3-c-desc">Отдельные специалисты под Instagram, TikTok, Reddit, YouTube и стриминговые платформы — каждый канал ведёт свой человек.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <span class="card-tag" data-i18n="slide3-d-tag">D // ПРОДАКШН</span>
+                        <p class="card-desc" data-i18n="slide3-d-desc">Фотосессии и съёмки Reels с видеографом, монтаж контента — организуем и проводим вместе с тобой.</p>
+                    </div>
+                </div>
+
+                <!-- Team Collage Row -->
+                <div class="collage-grid-two-cols reveal reveal-cascade">
+                    <div class="collage-img-box">
+                        <div class="editorial-image-overlay"></div>
+                        <img src="assets/team-meeting.png" alt="BIJOU Management Team Meeting" class="editorial-img">
+                        <span class="collage-label">✦ PERFORMANCE STRATEGY</span>
+                    </div>
+                    <div class="collage-img-box">
+                        <div class="editorial-image-overlay"></div>
+                        <img src="assets/team-call.png" alt="24/7 Chatters Support Hub" class="editorial-img">
+                        <span class="collage-label">✦ 24/7 FAN ENGAGEMENT HUB</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 4: Услуги -->
+        <section id="services" class="slide-section reveal">
+            
+            <div class="container slide-body-container">
+                <h2 class="txt-slide-title" data-i18n="slide4-title">Что мы берём на себя</h2>
+                
+                <div class="services-vertical-grid reveal reveal-cascade">
+                    <div class="service-item-row">
+                        <div class="service-index">01</div>
+                        <div class="service-text" data-i18n="slide4-s1">
+                            <strong>Полное ведение аккаунта OF</strong> — публикации, лента, промо
+                        </div>
+                    </div>
+                    <div class="service-item-row">
+                        <div class="service-index">02</div>
+                        <div class="service-text" data-i18n="slide4-s2">
+                            <strong>Чаттинг с фанами 24/7</strong> — переписки и продажи
+                        </div>
+                    </div>
+                    <div class="service-item-row">
+                        <div class="service-index">03</div>
+                        <div class="service-text" data-i18n="slide4-s3">
+                            <strong>Контент-план</strong> — ты всегда знаешь, что снимать
+                        </div>
+                    </div>
+                    <div class="service-item-row">
+                        <div class="service-index">04</div>
+                        <div class="service-text" data-i18n="slide4-s4">
+                            <strong>Продвижение</strong> — TikTok, Instagram, Reddit, Twitter
+                        </div>
+                    </div>
+                    <div class="service-item-row">
+                        <div class="service-index">05</div>
+                        <div class="service-text" data-i18n="slide4-s5">
+                            <strong>Монтаж контента</strong> — Reels, клипы, промо-ролики
+                        </div>
+                    </div>
+                    <div class="service-item-row">
+                        <div class="service-index">06</div>
+                        <div class="service-text" data-i18n="slide4-s6">
+                            <strong>Личный брендинг</strong> — стиль, образ, позиционирование
+                        </div>
+                    </div>
+                    <div class="service-item-row">
+                        <div class="service-index">07</div>
+                        <div class="service-text" data-i18n="slide4-s7">
+                            <strong>Ценообразование и продажи</strong> — подписка, PPV, кастомы
+                        </div>
+                    </div>
+                    <div class="service-item-row">
+                        <div class="service-index">08</div>
+                        <div class="service-text" data-i18n="slide4-s8">
+                            <strong>Съёмки и фотосессии</strong> — организация и проведение
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 5: Твоя часть (Solid Blue screen section) -->
+        <section id="your-part" class="slide-section solid-blue-bg reveal">
+            
+            <div class="container slide-body-container">
+                <span class="section-badge-dark" data-i18n="slide5-tag">А ЧТО ДЕЛАЕШЬ ТЫ?</span>
+                <h2 class="txt-slide-title dark-text" data-i18n="slide5-title">Только контент.<br>2–3 часа в день.</h2>
+                
+                <p class="slide-intro-text dark-text" data-i18n="slide5-desc">
+                    Ты снимаешь по готовому контент-плану — мы говорим, что снимать, когда и как. Всё остальное: переписки, продажи, продвижение, монтаж и аналитика — работа команды Bijou.
+                </p>
+            </div>
+        </section>
+
+        <!-- Слайд 6: Результаты -->
+        <section id="results" class="slide-section reveal">
+            
+            <div class="container slide-body-container">
+                <h2 class="txt-slide-title" data-i18n="slide6-title">Кейсы первого месяца</h2>
+                
+                <div class="grid-three-cols align-items-stretch reveal reveal-cascade">
+                    <div class="results-card">
+                        <span class="card-tag" data-i18n="slide6-c1-tag">КЕЙС 01 · ПЕРВЫЙ МЕСЯЦ</span>
+                        <h3 class="stat-number" data-target="8000">$0</h3>
+                        <p class="card-desc" data-i18n="slide6-c1-desc">оборот аккаунта, из них <strong>$3,000 на руки модели</strong> уже в первый месяц сотрудничества</p>
+                    </div>
+                    
+                    <div class="results-card">
+                        <span class="card-tag" data-i18n="slide6-c2-tag">КЕЙС 02 · ПЕРВЫЕ 2 НЕДЕЛИ</span>
+                        <h3 class="stat-number" data-target="5000">$0</h3>
+                        <p class="card-desc" data-i18n="slide6-c2-desc">оборот аккаунта за первые две недели ведения OnlyFans с нуля</p>
+                    </div>
+                    
+                    <div class="results-card is-neutral">
+                        <span class="card-tag" data-i18n="slide6-c3-tag">ЧЕСТНО ПРО СТАРТ</span>
+                        <p class="card-desc font-light" data-i18n="slide6-c3-desc">Первый месяц — самый сложный: аудитория тебя ещё не знает. Наша задача — пройти разгон максимально быстро, чтобы уже в первый месяц ты имела минимум <strong>$300–400 дохода</strong>, а дальше — рост.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 7: Старт (Твой первый месяц с нами) -->
+        <section id="start-timeline" class="slide-section reveal">
+            
+            <div class="container slide-body-container">
+                <h2 class="txt-slide-title" data-i18n="slide7-title">Твой первый месяц с нами</h2>
+                
+                <div class="timeline-bar-wrapper reveal">
+                    <div class="timeline-line"></div>
+                    <div class="grid-four-cols relative-z reveal reveal-cascade">
+                        <div class="timeline-step">
+                            <div class="step-dot"></div>
+                            <span class="step-num" data-i18n="slide7-s1-tag">ШАГ 01</span>
+                            <h4 data-i18n="slide7-s1-h">Созвон-стратегия</h4>
+                            <p class="step-desc" data-i18n="slide7-s1-p">Знакомимся, определяем твои границы, образ и цели по доходу.</p>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-dot"></div>
+                            <span class="step-num" data-i18n="slide7-s2-tag">ШАГ 02</span>
+                            <h4 data-i18n="slide7-s2-h">Подготовка аккаунтов</h4>
+                            <p class="step-desc" data-i18n="slide7-s2-p">Настраиваем OnlyFans и все соцсети под твой личный бренд.</p>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-dot"></div>
+                            <span class="step-num" data-i18n="slide7-s3-tag">ШАГ 03</span>
+                            <h4 data-i18n="slide7-s3-h">Пробный контент-план</h4>
+                            <p class="step-desc" data-i18n="slide7-s3-p">Первый план съёмок — пробуем форматы и смотрим, что заходит аудитории.</p>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-dot"></div>
+                            <span class="step-num" data-i18n="slide7-s4-tag">ШАГ 04</span>
+                            <h4 data-i18n="slide7-s4-h">Фотосессия и Reels</h4>
+                            <p class="step-desc" data-i18n="slide7-s4-p">Съёмка лично с тобой и видеографом — база контента для запуска.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 8: Условия -->
+        <section id="terms" class="slide-section reveal">
+            
+            <div class="container slide-body-container">
+                <h2 class="txt-slide-title" data-i18n="slide8-title">Как мы делим доход</h2>
+                
+                <div class="grid-two-cols align-items-stretch gap-large reveal reveal-cascade">
+                    <div class="terms-share-card">
+                        <span class="card-tag" data-i18n="slide8-t1-tag">ТВОЯ ДОЛЯ</span>
+                        <h3 class="share-percentage">30%</h3>
+                        <p class="card-desc font-light" data-i18n="slide8-t1-desc">чистыми на руки — за 2–3 часа съёмок в день, без переписок, продвижения и операционки</p>
+                    </div>
+                    
+                    <div class="terms-coverage-card">
+                        <span class="card-tag" data-i18n="slide8-t2-tag">ЧТО ПОКРЫВАЮТ 70% АГЕНТСТВА</span>
+                        <ul class="coverage-list">
+                            <li data-i18n="slide8-t2-l1"><span>—</span> Команда чаттеров, работающая посменно</li>
+                            <li data-i18n="slide8-t2-l2"><span>—</span> Специалисты по каждой соцсети и трафику</li>
+                            <li data-i18n="slide8-t2-l3"><span>—</span> Менеджеры контроля качества</li>
+                            <li data-i18n="slide8-t2-l4"><span>—</span> Продакшн: фотосессии, Reels, монтаж</li>
+                            <li data-i18n="slide8-t2-l5"><span>—</span> Вложения в продвижение и рост аккаунта</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Калькулятор дохода -->
+                <div class="calculator-card content-card reveal reveal-up">
+                    <span class="card-tag" data-i18n="slide8-calc-tag">КАЛЬКУЛЯТОР ПРИБЫЛИ</span>
+                    <h3 class="card-title-sm text-gradient-accent" data-i18n="slide8-calc-title">Рассчитай свой чистый доход в месяц</h3>
+                    
+                    <div class="calc-slider-box">
+                        <div class="calc-labels">
+                            <span class="calc-label-text" data-i18n="slide8-calc-rev-lbl">Месячный оборот аккаунта:</span>
+                            <span class="calc-amount-val" id="calc-rev-val">$10,000</span>
+                        </div>
+                        <input type="range" min="5000" max="100000" step="5000" value="10000" class="calc-slider-input" id="calc-slider">
+                        <div class="calc-limits">
+                            <span>$5,000</span>
+                            <span>$100,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-result-box">
+                        <span class="calc-result-label" data-i18n="slide8-calc-profit-lbl">Твоя чистая прибыль (до вычета налогов):</span>
+                        <h4 class="calc-result-val" id="calc-payout-val">$3,000</h4>
+                    </div>
+                </div>
+                
+                <div class="badges-row-start">
+                    <span class="highlight-badge" data-i18n="slide8-badge1">✦ Официальный контракт</span>
+                    <span class="highlight-badge" data-i18n="slide8-badge2">✦ Испытательный период</span>
+                    <span class="highlight-badge" data-i18n="slide8-badge3">✦ Без жёстких обязательств</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 9: Безопасность -->
+        <section id="privacy" class="slide-section reveal">
+            
+            <div class="container slide-body-container">
+                <h2 class="txt-slide-title" data-i18n="slide9-title">Твоя приватность — наш приоритет</h2>
+                
+                <div class="grid-three-cols reveal reveal-cascade">
+                    <div class="content-card">
+                        <h3 class="card-title-sm text-gradient-accent" data-i18n="slide9-c1-h">Анонимность</h3>
+                        <p class="card-desc" data-i18n="slide9-c1-p">Можно работать без лица и под псевдонимом. Формат контента и степень открытости определяешь ты — мы строим стратегию под твои границы.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3 class="card-title-sm text-gradient-accent" data-i18n="slide9-c2-h">Гео-блок</h3>
+                        <p class="card-desc" data-i18n="slide9-c2-p">Блокируем показ твоего профиля в родной стране и любых регионах по твоему выбору — знакомые не увидят твой аккаунт.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3 class="card-title-sm text-gradient-accent" data-i18n="slide9-c3-h">DMCA-защита</h3>
+                        <p class="card-desc" data-i18n="slide9-c3-p">Мониторим утечки и удаляем слитый контент с сайтов через DMCA — твой контент остаётся только там, где за него платят.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 10: Следующий шаг (Связаться) -->
+        <section id="contact-trigger" class="slide-section reveal">
+            
+            <div class="container slide-body-container intro-container text-center">
+                <div class="next-step-visual">
+                    <div class="starburst-icon animation-spin">✦</div>
+                </div>
+                
+                <h2 class="txt-slide-title size-large" data-i18n="slide10-title">Если тебе откликается — следующий шаг за нами</h2>
+                
+                <p class="slide-intro-text centered" data-i18n="slide10-desc">
+                    Напиши нам — назначим стратегический созвон: познакомимся ближе, ответим на все вопросы, обсудим твои цели и границы. Без обязательств — просто разговор.
+                </p>
+                
+                <button class="btn btn-primary subm-rad open-popup-btn btn-lg" data-i18n="slide10-btn">Начать сотрудничество</button>
+                
+                <div class="footer-inline-meta" data-i18n="slide10-meta">
+                    BIJOU — CREATIVE HOUSE FOR ICONIC PEOPLE
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Cookies Popup -->
+    <div class="cookies-popup" id="cookies-popup">
+        <div class="cookies-content">
+            <h6 class="txt-cookies-title" data-i18n="cookies-title">Куки</h6>
+            <div class="txt12" data-i18n="cookies-desc">
+                Мы используем файлы cookie для улучшения работы сайта. Они помогают нам понять, как вы взаимодействуете с платформой, чтобы сделать контент более релевантным. Для получения дополнительной информации ознакомьтесь с нашей Политикой конфиденциальности.
+            </div>
+        </div>
+        <div class="cookies-buttons">
+            <button class="btn btn-primary btn-sm" id="accept-cookies" data-i18n="cookies-acc">Принять</button>
+            <button class="btn btn-ghost btn-sm" id="deny-cookies" data-i18n="cookies-den">Отклонить</button>
+        </div>
+        <button class="cookies-close-btn" id="close-cookies-popup" aria-label="Закрыть">
+            <i data-lucide="x"></i>
+        </button>
+    </div>
+
+    <!-- Contact Popup Modal Form -->
+    <div class="popup-modal" id="contact-popup">
+        <div class="popup-overlay" id="popup-overlay"></div>
+        <div class="popup-card-wrapper">
+            <div class="popup-card">
+                <button class="popup-close-btn" id="close-popup-btn" aria-label="Закрыть">
+                    <i data-lucide="x"></i>
+                </button>
+                <div class="form-container">
+                    <h4 class="txt-popup-title" data-i18n="popup-title">СВЯЗАТЬСЯ С НАМИ</h4>
+                    <form class="contact-form-y" id="wf-form-Popup-Form">
+                        <div class="form-cols">
+                            <div class="form-group-y">
+                                <input class="txt-field-y" type="text" id="Name" name="Name" placeholder="Ваше имя" data-i18n-placeholder="popup-ph-name" required />
+                            </div>
+                            <div class="form-group-y">
+                                <input class="txt-field-y" type="text" id="Contact-Details" name="Contact-Details" placeholder="Email / Telegram" data-i18n-placeholder="popup-ph-contact" required />
+                            </div>
+                            <div class="form-group-y select-wrapper col-span-2">
+                                <select id="Role" name="Role" class="txt-field-y select-field" required>
+                                    <option value="" data-i18n="popup-opt0">Я пишу как...</option>
+                                    <option value="Talent" data-i18n="popup-opt1">Модель / Создатель контента</option>
+                                    <option value="Manager" data-i18n="popup-opt2">Представитель модели</option>
+                                    <option value="Other" data-i18n="popup-opt3">Другое</option>
+                                </select>
+                            </div>
+
+                            <!-- Conditional Fields -->
+                            <div class="form-group-y optional-field-wrapper" data-role="talent">
+                                <input class="txt-field-y is-inst" type="text" id="Instagram" name="Instagram" placeholder="Ссылка на Instagram" data-i18n-placeholder="popup-ph-inst" />
+                            </div>
+
+                            <div class="form-group-y col-span-2">
+                                <textarea id="Message" name="Message" placeholder="Расскажите о себе, ваших аккаунтах и целях..." data-i18n-placeholder="popup-ph-msg" class="txt-field-y is-textarea" required></textarea>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block subm-rad" id="popup-submit-btn" data-i18n="popup-btn">
+                            Отправить заявку
+                        </button>
+                        <div class="form-status-y" id="popup-form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App JavaScript -->
+    <script src="translations.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
