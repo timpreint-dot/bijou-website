@@ -1622,6 +1622,10 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+    .mobile-hidden {
+        display: none !important;
+    }
+
     .lang-switcher {
         display: flex;
         position: static;
@@ -1631,7 +1635,13 @@ h1, h2, h3, h4 {
     }
 
     .lang-btn {
-        font-size: 0.65rem;
+        font-size: 0.8rem;
         padding: 0.25rem 0.2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .desktop-hidden {
+        display: none !important;
     }
 }

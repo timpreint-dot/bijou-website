@@ -107,7 +107,7 @@ const translations = {
         "popup-ph-msg": "Расскажите о себе, ваших аккаунтах и целях...",
         "popup-btn": "Отправить заявку"
     },
-    uk: {
+    ua: {
         "nav-home": "Головна",
         "nav-about": "Про нас",
         "nav-philosophy": "Філософія",
