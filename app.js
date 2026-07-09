@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* --- Internationalization (i18n) Logic --- */
-    const defaultLang = 'ru';
+    const defaultLang = 'en';
     let currentLang = localStorage.getItem('bijou_lang') || defaultLang;
 
     function applyTranslations(lang) {
