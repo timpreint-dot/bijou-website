@@ -569,6 +569,13 @@ h1, h2, h3, h4 {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    animation: slowZoom 25s ease-in-out infinite;
+}
+
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
 }
 
 .hero-bg-overlay {
