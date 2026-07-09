@@ -406,32 +406,63 @@ document.addEventListener('DOMContentLoaded', () => {
                                         currentLang === 'es' ? 'Enviando...' :
                                         'Sending...';
             
-            setTimeout(() => {
+            const formData = new FormData(popupForm);
+            const data = {
+                name: formData.get('Name'),
+                contact: formData.get('Contact-Details'),
+                role: formData.get('Role'),
+                instagram: formData.get('Instagram'),
+                message: formData.get('Message')
+            };
+            
+            fetch('/api/telegram', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
                 popupSubmitBtn.disabled = false;
-                popupSubmitBtn.textContent = originalText; // It will be reverted to whatever was there, but ideally we apply trans
+                popupSubmitBtn.textContent = originalText;
                 applyTranslations(currentLang); // Re-apply to fix button text
                 
-                popupFormStatus.textContent = currentLang === 'ru' ? 'Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.' : 
-                                             currentLang === 'uk' ? 'Дякуємо! Вашу заявку успішно відправлено. Ми зв\'яжемося з вами найближчим часом.' :
-                                             currentLang === 'es' ? '¡Gracias! Su solicitud ha sido enviada con éxito. Nos pondremos en contacto con usted en breve.' :
-                                             'Thank you! Your request has been successfully sent. We will contact you shortly.';
-                popupFormStatus.className = 'form-status-y success';
+                if (result.success) {
+                    popupFormStatus.textContent = currentLang === 'ru' ? 'Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.' : 
+                                                 currentLang === 'ua' ? 'Дякуємо! Вашу заявку успішно відправлено. Ми зв\'яжемося з вами найближчим часом.' :
+                                                 currentLang === 'es' ? '¡Gracias! Su solicitud ha sido enviada con éxito. Nos pondremos en contacto con usted en breve.' :
+                                                 'Thank you! Your request has been successfully sent. We will contact you shortly.';
+                    popupFormStatus.className = 'form-status-y success';
+                    
+                    popupForm.reset();
+                    
+                    // Hide dynamic wrappers
+                    if (typeof optionalFieldWrappers !== 'undefined') {
+                        optionalFieldWrappers.forEach(wrapper => {
+                            wrapper.style.display = 'none';
+                            const input = wrapper.querySelector('input');
+                            if (input) input.removeAttribute('required');
+                        });
+                    }
+                    
+                    setTimeout(() => {
+                        popupFormStatus.textContent = '';
+                        popupFormStatus.className = 'form-status-y';
+                        closeModal();
+                    }, 5000);
+                } else {
+                    popupFormStatus.textContent = currentLang === 'ru' ? 'Произошла ошибка при отправке. Пожалуйста, попробуйте позже.' : 'An error occurred while sending. Please try again later.';
+                    popupFormStatus.className = 'form-status-y error';
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                popupSubmitBtn.disabled = false;
+                popupSubmitBtn.textContent = originalText;
+                applyTranslations(currentLang);
                 
-                popupForm.reset();
-                
-                // Hide dynamic wrappers
-                optionalFieldWrappers.forEach(wrapper => {
-                    wrapper.style.display = 'none';
-                    const input = wrapper.querySelector('input');
-                    if (input) input.removeAttribute('required');
-                });
-                
-                setTimeout(() => {
-                    popupFormStatus.textContent = '';
-                    popupFormStatus.className = 'form-status-y';
-                    closeModal();
-                }, 4000);
-            }, 1500);
+                popupFormStatus.textContent = currentLang === 'ru' ? 'Произошла ошибка при отправке. Пожалуйста, попробуйте позже.' : 'An error occurred while sending. Please try again later.';
+                popupFormStatus.className = 'form-status-y error';
+            });
         });
     }
 });
