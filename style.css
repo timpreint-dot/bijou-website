@@ -603,9 +603,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-main-content > * {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: slideUpFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: slideUpFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero-main-content .hero-star { animation-delay: 0.2s; }
@@ -613,7 +611,11 @@ h1, h2, h3, h4 {
 .hero-main-content .hero-slogan { animation-delay: 0.6s; }
 
 @keyframes slideUpFadeIn {
-    to {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
