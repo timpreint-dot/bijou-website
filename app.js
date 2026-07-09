@@ -399,6 +399,19 @@ document.addEventListener('DOMContentLoaded', () => {
         popupForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
+            // Anti-spam limit
+            const submissionsKey = 'bijou_contact_submissions';
+            let submissionsCount = parseInt(localStorage.getItem(submissionsKey) || '0', 10);
+            
+            if (submissionsCount >= 3) {
+                popupFormStatus.textContent = currentLang === 'ru' ? 'Вы уже отправили максимальное количество заявок (3).' :
+                                             currentLang === 'ua' ? 'Ви вже відправили максимальну кількість заявок (3).' :
+                                             currentLang === 'es' ? 'Ya ha enviado el número máximo de solicitudes (3).' :
+                                             'You have already submitted the maximum number of requests (3).';
+                popupFormStatus.className = 'form-status-y error';
+                return;
+            }
+            
             popupSubmitBtn.disabled = true;
             const originalText = popupSubmitBtn.textContent;
             popupSubmitBtn.textContent = currentLang === 'ru' ? 'Отправка...' :
@@ -432,6 +445,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                                  currentLang === 'es' ? '¡Gracias! Su solicitud ha sido enviada con éxito. Nos pondremos en contacto con usted en breve.' :
                                                  'Thank you! Your request has been successfully sent. We will contact you shortly.';
                     popupFormStatus.className = 'form-status-y success';
+                    
+                    // Increment submission count
+                    submissionsCount++;
+                    localStorage.setItem(submissionsKey, submissionsCount.toString());
                     
                     popupForm.reset();
                     
