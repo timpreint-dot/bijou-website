@@ -602,6 +602,23 @@ h1, h2, h3, h4 {
     max-width: 900px;
 }
 
+.hero-main-content > * {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUpFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-main-content .hero-star { animation-delay: 0.2s; }
+.hero-main-content .txt-logo { animation-delay: 0.4s; }
+.hero-main-content .hero-slogan { animation-delay: 0.6s; }
+
+@keyframes slideUpFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-slogan {
     font-family: var(--font-heading);
     font-size: clamp(1.2rem, 2.2vw, 2.2rem);
