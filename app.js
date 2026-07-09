@@ -3,6 +3,17 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Prevent iOS auto-scroll on refresh
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    
+    // Clear hash on load to prevent jumping if URL has anchor
+    if (window.location.hash) {
+        setTimeout(() => window.scrollTo(0, 0), 1);
+        history.replaceState(null, null, window.location.pathname);
+    }
+
     // Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
@@ -95,15 +106,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking a nav link
-        const navLinks = document.querySelectorAll('.nav-link');
+        // Handle smooth scrolling and menu close
+        const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent URL hash update to avoid jump on refresh
+                
                 navMenu.classList.remove('open');
                 const icon = mobileToggle.querySelector('i');
                 if (icon) {
                     icon.setAttribute('data-lucide', 'menu');
                     lucide.createIcons();
+                }
+                
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
