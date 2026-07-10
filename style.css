@@ -1573,10 +1573,7 @@ h1, h2, h3, h4 {
 
 .marquee-track {
     display: flex;
-    animation: scroll-marquee 30s linear infinite;
-    -webkit-animation: scroll-marquee 30s linear infinite;
-    will-change: transform;
-    -webkit-transform-style: preserve-3d;
+    width: 100%;
 }
 
 .marquee-image-group {
@@ -1584,6 +1581,8 @@ h1, h2, h3, h4 {
     gap: 2rem;
     padding-right: 2rem;
     flex-shrink: 0;
+    animation: scroll-marquee 30s linear infinite;
+    will-change: transform;
 }
 
 .marquee-image-group img {
@@ -1608,19 +1607,10 @@ h1, h2, h3, h4 {
 
 @keyframes scroll-marquee {
     0% {
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0);
     }
     100% {
-        transform: translate3d(-50%, 0, 0);
-    }
-}
-
-@-webkit-keyframes scroll-marquee {
-    0% {
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-    100% {
-        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translateX(-100%);
     }
 }
 
